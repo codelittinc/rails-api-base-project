@@ -4,10 +4,11 @@ source 'https://rubygems.org'
 
 ruby '2.7.2'
 
+gem 'rails', '~> 6.0.3'
+
 gem 'gelf'
 gem 'pg', '~> 1.2'
 gem 'puma', '~> 4.1'
-gem 'rails', github: 'rails/rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
 
