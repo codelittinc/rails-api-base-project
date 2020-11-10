@@ -6,6 +6,8 @@ ruby '2.7.2'
 
 gem 'rails', '~> 6.0.3'
 
+gem 'rails_admin', '~> 2.0'
+
 gem 'gelf'
 gem 'pg', '~> 1.2'
 gem 'puma', '~> 4.1'
