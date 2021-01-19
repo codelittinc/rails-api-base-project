@@ -75,11 +75,11 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
-  if ENV['RAILS_LOG_TO_STDOUT'].present?
-    logger           = ActiveSupport::Logger.new($stdout)
-    logger.formatter = config.log_formatter
-    config.logger    = ActiveSupport::TaggedLogging.new(logger)
+  if !ENV['LOG_HOST'] || !ENV['LOG_ENV']
+    raise StandardError,
+          'The LOG_HOST and LOG_ENV environment variables are missing!'
   end
+
   config.logger = GELF::Logger.new(
     'logs.codelitt.dev',
     12_201,
