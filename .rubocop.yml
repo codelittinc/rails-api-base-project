@@ -5,7 +5,7 @@ AllCops:
   NewCops: enable
 
 # Ignore comments
-Metrics/LineLength:
+Layout/LineLength:
   Max: 80
   IgnoredPatterns: ['#\s']
 
